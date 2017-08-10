@@ -44,4 +44,25 @@ public class BasicLuisDialog : LuisDialog<object>
         context.Wait(MessageReceived);
     }
 
+    [LuisIntent("Idade")]
+    public async Task Idade(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"Tenho 29 anos."); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Nome_Completo")]
+    public async Task Nome_Completo(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"Meu nome completo é Vitor Hugo de Almeida Profeta."); //
+        context.Wait(MessageReceived);
+    }
+
+    [LuisIntent("Formacao")]
+    public async Task Formacao(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"Formei no Cefet-MG em Engenharia de Computação."); //
+        context.Wait(MessageReceived);
+    }
+
 }
