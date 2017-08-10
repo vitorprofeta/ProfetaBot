@@ -36,5 +36,12 @@ public class BasicLuisDialog : LuisDialog<object>
         await context.PostAsync($"Tenho conhecimentos em C#, Asp.NET e bla bla bla"); //
         context.Wait(MessageReceived);
     }
-    
+
+    [LuisIntent("Experiências")]
+    public async Task Experiências(IDialogContext context, LuisResult result)
+    {
+        await context.PostAsync($"Já trabalhei na aec, ativas e cobrar."); //
+        context.Wait(MessageReceived);
+    }
+
 }
